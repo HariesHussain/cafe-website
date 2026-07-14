@@ -48,15 +48,15 @@ const Header = () => {
             }}
             className="flex items-center gap-3 group"
           >
-            <div className="w-12 h-12 rounded-full border-2 border-[#d4a574] flex items-center justify-center
-                          transition-transform duration-300 group-hover:rotate-[15deg]">
-              <span className="text-[#d4a574] font-serif text-xl font-bold">N</span>
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#d4a574] flex items-center justify-center
+                          transition-transform duration-300 group-hover:rotate-[15deg] flex-shrink-0">
+              <span className="text-[#d4a574] font-serif text-xs sm:text-sm font-bold">ID</span>
             </div>
-            <div className="hidden sm:block">
-              <h1 className="font-serif text-xl sm:text-2xl text-[#f5e6d3] font-bold tracking-wide">
-                Nandyal
+            <div>
+              <h1 className="font-serif text-lg sm:text-xl md:text-2xl text-[#f5e6d3] font-bold tracking-wide leading-tight">
+                Irani Dude
               </h1>
-              <p className="text-xs text-[#d4a574] tracking-widest uppercase">
+              <p className="text-[10px] sm:text-xs text-[#d4a574] tracking-widest uppercase">
                 Vintage Taste is Back
               </p>
             </div>

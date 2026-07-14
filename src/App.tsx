@@ -7,7 +7,8 @@ import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0a2e2a] overflow-x-hidden">
+    <div className="min-h-screen bg-[#0a2e2a]">
+      <div className="max-w-[1920px] mx-auto relative overflow-x-hidden">
       <Header />
       <main>
         <Hero />
@@ -16,6 +17,7 @@ function App() {
         <Contact />
       </main>
       <WhatsAppButton />
+      </div>
     </div>
   )
 }

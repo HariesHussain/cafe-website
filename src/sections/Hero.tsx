@@ -77,8 +77,8 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 w-full min-h-screen flex items-center">
-        <div className="w-full section-padding py-24 lg:py-0">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="w-full section-padding pt-28 pb-16 lg:pt-0 lg:pb-0">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
               <div className="space-y-6">
@@ -101,7 +101,7 @@ const Hero = () => {
                   className="body-lg text-white/70 max-w-md mx-auto lg:mx-0 animate-slide-up"
                   style={{ animationDelay: '0.8s' }}
                 >
-                  Timeless Refreshment, Irani Style. Experience the authentic flavors of traditional Irani Chai and snacks in Nandyal.
+                  Relive the timeless flavors of authentic Irani Chai, freshly brewed tea, puffs, snacks, and handcrafted beverages at Irani Dude. Bringing the traditional café experience to Nandyal with premium taste and unforgettable hospitality.
                 </p>
                 
                 {/* CTA Buttons */}
@@ -150,7 +150,7 @@ const Hero = () => {
             </div>
 
             {/* Right Content - Carousel */}
-            <div className="order-1 lg:order-2 relative">
+            <div className="order-1 lg:order-2 relative px-2 sm:px-0">
               <div 
                 className="relative aspect-[4/3] lg:aspect-[16/10] rounded-2xl overflow-hidden
                             shadow-2xl shadow-black/50 border border-[rgba(212,165,116,0.2)]"
@@ -173,7 +173,7 @@ const Hero = () => {
                   >
                     <img
                       src={image}
-                      alt={`Nandyal Cafe in Nandyal - View ${index + 1}`}
+                      alt={`Irani Dude Cafe in Nandyal - View ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading={index === 0 ? "eager" : "lazy"}
                     />

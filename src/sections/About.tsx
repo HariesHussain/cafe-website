@@ -32,7 +32,7 @@ const About = () => {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#1a4a42]/20 to-transparent" />
       
       <div className="relative z-10 w-full section-padding">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           {/* Left - Images */}
           <div className="relative">
             <div className="relative aspect-[4/3] lg:aspect-square">
@@ -107,7 +107,7 @@ const About = () => {
               style={{ transitionDelay: '300ms' }}
             >
               <span className="text-[#d4a574] text-sm tracking-[0.3em] uppercase">
-                Nandyal
+                Irani Dude
               </span>
             </div>
 
@@ -120,7 +120,7 @@ const About = () => {
               }`}
               style={{ transitionDelay: '400ms' }}
             >
-              Authentic Taste of Nandyal is Back
+              Authentic Taste of Irani Dude Is Back
             </h2>
 
             {/* Description */}
@@ -133,8 +133,7 @@ const About = () => {
                 }`}
                 style={{ transitionDelay: '500ms' }}
               >
-                Relive the classic flavors with Nandyal – bringing the timeless 
-                taste of Irani Chai and more to every corner of India.
+                Irani Dude is inspired by the timeless heritage of traditional Irani cafés. We serve freshly brewed Irani Chai, flavorful snacks, premium milkshakes, refreshing mojitos, and handcrafted beverages in a warm and welcoming atmosphere.
               </p>
               <p
                 className={`body-md text-white/70 transition-all duration-700 ${
@@ -144,12 +143,7 @@ const About = () => {
                 }`}
                 style={{ transitionDelay: '600ms' }}
               >
-                Nandyal is your gateway to the authentic and cherished flavors of 
-                Irani cafés. Rooted in tradition and infused with a modern twist, we 
-                offer a wide range of beverages and snacks that cater to every palate. 
-                From the iconic Irani Chai to delicious puffs and refreshing mocktails, 
-                Nandyal ensures every bite and sip is a nostalgic journey back to 
-                the golden era of taste.
+                Every cup reflects authentic taste, quality ingredients, and genuine hospitality. Rooted in tradition and infused with a modern twist, Irani Dude offers a wide range of beverages and snacks that cater to every palate — bringing the traditional café experience to Nandyal.
               </p>
             </div>
 

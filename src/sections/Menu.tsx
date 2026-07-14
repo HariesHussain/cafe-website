@@ -105,7 +105,7 @@ const Menu = () => {
               <div className="absolute inset-0">
                 <img
                   src={category.image}
-                  alt={`${category.name} menu item at Nandyal Cafe`}
+                  alt={`${category.name} menu item at Irani Dude Cafe`}
                   className="w-full h-full object-cover transition-transform duration-700
                            group-hover:scale-110"
                   loading="lazy"
@@ -139,20 +139,6 @@ const Menu = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* View All Button */}
-        <div
-          className={`text-center mt-12 transition-all duration-700 ${
-            isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-6'
-          }`}
-          style={{ transitionDelay: '1200ms' }}
-        >
-          <button className="btn-outline">
-            View Full Menu
-          </button>
         </div>
       </div>
     </section>

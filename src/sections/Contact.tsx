@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { MapPin, Mail, Phone, Instagram, Youtube, ArrowUp } from 'lucide-react';
+import { MapPin, Mail, Phone, ArrowUp } from 'lucide-react';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,26 +31,21 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Address',
-      value: 'Nandyal, Andhra Pradesh, India',
-      href: '#',
+      value: 'Atmakur Road near chinna cheruvu katta',
+      href: 'https://maps.app.goo.gl/VRbztUuwjDvaDcwF8',
     },
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@nandyal.com',
-      href: 'mailto:info@nandyal.com',
+      value: 'info@iranidude.com',
+      href: 'mailto:info@iranidude.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '9966166698',
-      href: 'tel:9966166698',
+      value: '1111111111',
+      href: 'tel:1111111111',
     },
-  ];
-
-  const socialLinks = [
-    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/nandyal' },
-    { icon: Youtube, label: 'YouTube', href: 'https://youtube.com/nandyal' },
   ];
 
   const quickLinks = [
@@ -92,7 +87,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20 lg:mb-32">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto mb-20 lg:mb-32">
             {/* Contact Info */}
             <div className={`flex flex-col justify-center gap-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`} style={{ transitionDelay: '300ms' }}>
               <div className="grid sm:grid-cols-1 gap-4">
@@ -100,14 +95,16 @@ const Contact = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="group flex items-center p-5 rounded-xl bg-[#1a4a42]/30 border border-[rgba(212,165,116,0.2)] hover:border-[rgba(212,165,116,0.5)] hover:bg-[#1a4a42]/50 transition-all duration-300 gap-5"
+                    target={item.label === 'Address' ? '_blank' : undefined}
+                    rel={item.label === 'Address' ? 'noopener noreferrer' : undefined}
+                    className="group flex items-center p-4 sm:p-5 rounded-xl bg-[#1a4a42]/30 border border-[rgba(212,165,116,0.2)] hover:border-[rgba(212,165,116,0.5)] hover:bg-[#1a4a42]/50 transition-all duration-300 gap-4 sm:gap-5"
                   >
-                    <div className="w-14 h-14 flex-shrink-0 rounded-full bg-[#d4a574]/10 flex items-center justify-center group-hover:bg-[#d4a574]/20 transition-all duration-300">
-                      <item.icon className="w-6 h-6 text-[#d4a574]" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-full bg-[#d4a574]/10 flex items-center justify-center group-hover:bg-[#d4a574]/20 transition-all duration-300">
+                      <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#d4a574]" />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col min-w-0">
                       <span className="text-xs text-white/50 mb-1 uppercase tracking-wider">{item.label}</span>
-                      <span className="text-white text-base group-hover:text-[#d4a574] transition-colors duration-300 break-all">
+                      <span className="text-white text-sm sm:text-base group-hover:text-[#d4a574] transition-colors duration-300 break-words">
                         {item.value}
                       </span>
                     </div>
@@ -117,15 +114,15 @@ const Contact = () => {
             </div>
 
             {/* Google Maps Embed */}
-            <div className={`w-full min-h-[350px] rounded-2xl overflow-hidden border border-[rgba(212,165,116,0.2)] relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`} style={{ transitionDelay: '500ms' }}>
+            <div className={`w-full min-h-[300px] sm:min-h-[350px] rounded-2xl overflow-hidden border border-[rgba(212,165,116,0.2)] relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`} style={{ transitionDelay: '500ms' }}>
               <iframe
-                src="https://www.google.com/maps?q=Nandyal,+Andhra Pradesh,+India&hl=en&z=12&output=embed"
+                src="https://www.google.com/maps?q=Atmakur+Road+near+chinna+cheruvu+katta,+Nandyal,+Andhra+Pradesh&hl=en&z=16&output=embed"
                 className="absolute inset-0 w-full h-full"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Google Map Location of Nandyal Cafe"
+                title="Google Map Location of Irani Dude Cafe, Nandyal"
               ></iframe>
             </div>
           </div>
@@ -134,7 +131,7 @@ const Contact = () => {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-[rgba(212,165,116,0.3)] to-transparent mb-12" />
 
           {/* Bottom Section */}
-          <div className="grid md:grid-cols-3 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Brand */}
             <div
               className={`text-center md:text-left transition-all duration-700 ${
@@ -145,22 +142,22 @@ const Contact = () => {
               style={{ transitionDelay: '500ms' }}
             >
               <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
-                <div className="w-10 h-10 rounded-full border-2 border-[#d4a574] flex items-center justify-center">
-                  <span className="text-[#d4a574] font-serif text-sm font-bold">N</span>
+                <div className="w-10 h-10 rounded-full border-2 border-[#d4a574] flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#d4a574] font-serif text-sm font-bold">ID</span>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl text-[#f5e6d3] font-bold">Nandyal</h3>
+                  <h3 className="font-serif text-xl text-[#f5e6d3] font-bold">Irani Dude</h3>
                   <p className="text-xs text-[#d4a574] tracking-wider uppercase">Vintage Taste is Back</p>
                 </div>
               </div>
-              <p className="text-sm text-white/60 max-w-xs">
-                Bringing the authentic flavors of Irani cafés to every corner of India.
+              <p className="text-sm text-white/60 max-w-xs mx-auto md:mx-0">
+                Bringing the authentic flavors of Irani cafés to Nandyal with premium taste and genuine hospitality.
               </p>
             </div>
 
             {/* Quick Links */}
             <div
-              className={`text-center transition-all duration-700 ${
+              className={`text-center md:text-right transition-all duration-700 ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-6'
@@ -168,7 +165,7 @@ const Contact = () => {
               style={{ transitionDelay: '600ms' }}
             >
               <h4 className="text-[#d4a574] text-sm tracking-wider uppercase mb-4">Quick Links</h4>
-              <nav className="flex flex-wrap justify-center gap-4">
+              <nav className="flex flex-wrap justify-center md:justify-end gap-4">
                 {quickLinks.map((link) => (
                   <a
                     key={link.name}
@@ -180,35 +177,6 @@ const Contact = () => {
                 ))}
               </nav>
             </div>
-
-            {/* Social Links */}
-            <div
-              className={`text-center md:text-right transition-all duration-700 ${
-                isVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-6'
-              }`}
-              style={{ transitionDelay: '700ms' }}
-            >
-              <h4 className="text-[#d4a574] text-sm tracking-wider uppercase mb-4">Follow Us</h4>
-              <div className="flex justify-center md:justify-end gap-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-[#1a4a42]/50 border border-[rgba(212,165,116,0.2)]
-                             flex items-center justify-center text-white/60
-                             hover:bg-[#d4a574] hover:text-[#0a2e2a] hover:border-[#d4a574]
-                             hover:scale-110 transition-all duration-300"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -217,9 +185,14 @@ const Contact = () => {
       <div className="relative py-6 border-t border-[rgba(212,165,116,0.1)]">
         <div className="w-full section-padding">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-white/50 text-center sm:text-left">
-              © 2024 <span className="text-[#d4a574]">Nandyal</span> | All Rights Reserved.
-            </p>
+            <div className="text-center sm:text-left">
+              <p className="text-sm text-white/50">
+                © 2026 <span className="text-[#d4a574]">Irani Dude</span>.
+              </p>
+              <p className="text-xs text-white/40 mt-1">
+                All Rights Reserved.
+              </p>
+            </div>
             
             {/* Back to Top */}
             <button
